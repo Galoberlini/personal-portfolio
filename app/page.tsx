@@ -1,101 +1,51 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-white">
+      <header>
+        <div className="fixed top-0 left-0 flex justify-between items-center w-full p-1 shadow-md"> 
+          <Link href="/" className="text-orange-600 hover:bg-orange-500 hover:rounded-full hover:text-white text-sm p-2 rounded">
+            Galo Berlini
+          </Link>
+          <Link href="/contact" className="text-orange-600  hover:bg-orange-500 hover:text-white hover:rounded-full p-2 text-sm rounded mr-10">
+            Contact Me
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </header>
+      <div className="mt-16">
+          {/* Hero */}
+      </div>
+      <div className="flex flex-col w-11/12 mx-auto">
+        <div className="w-full mx-auto my-8 h-1.5 bg-orange-500 rounded-full"></div>
+        <div className="mb-10 ml-20">
+          <h1 className="text-4xl text-justify font-bold">
+            About Me
+          </h1>
+          <p className="text-justify text-lg text-orange-500">
+            A BIT ABOUT MYSELF
+          </p>
+        </div>
+        <div className="flex justify-around items-start">
+          <div>
+            <p className="max-w-[300] w-full text-pretty text-md ">
+              Since I was 11, I knew that I could make the most of my strengths as a programmer. 
+              So, I decided to attend to "Instituto Politécnico Superior"
+              one of the most demanding technical high schools in Rosario. After completing 
+              the first three years of general education, I chose the "IT" orientation, where I learned...
+            </p>
+          </div>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            className="rounded-xl"
+            src="https://scontent.fros9-1.fna.fbcdn.net/v/t39.30808-6/299925982_187432163673456_4075394762315813463_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=C3x-OPUQicUQ7kNvgGXSBNd&_nc_oc=AdgpiZ839hA3NZq2WSJZ8lG6WQRrJN49_mOanKdOZWrSmsJpOvfImaoruLswSONGQ5jr3BAxd4i1NxZI8gS4B5ZV&_nc_zt=23&_nc_ht=scontent.fros9-1.fna&_nc_gid=AishI4Oc8RGUFTenGgUQFAT&oh=00_AYBxpBB3zl3YlGx1eggkuHyqzrqGku2TVOk0Y2hsa51ulg&oe=679F52E7"
+            alt="Instituto Politecnico Superior"
+            width={300}
+            height={300}>
+          </Image>
+        </div>
+        
+      </div>
     </div>
   );
 }
