@@ -9,7 +9,7 @@ export default function Home() {
           <Link href="/" className="text-orange-600 hover:bg-orange-500 hover:rounded-full hover:text-white text-sm p-2 rounded">
             Galo Berlini
           </Link>
-          <Link href="/contact" className="text-orange-600  hover:bg-orange-500 hover:text-white hover:rounded-full p-2 text-sm rounded mr-10">
+          <Link href="/" className="text-orange-600  hover:bg-orange-500 hover:text-white hover:rounded-full p-2 text-sm rounded mr-10">
             Contact Me
           </Link>
         </div>
@@ -31,9 +31,9 @@ export default function Home() {
           <div>
             <p className="max-w-[300] w-full text-pretty text-md ">
               Since I was 11, I knew that I could make the most of my strengths as a programmer. 
-              So, I decided to attend to "Instituto Politécnico Superior"
+              So, I decided to attend to &ldquo;Instituto Politécnico Superior&ldquo;
               one of the most demanding technical high schools in Rosario. After completing 
-              the first three years of general education, I chose the "IT" orientation, where I learned...
+              the first three years of general education, I chose the &ldquo;IT&ldquo; orientation, where I learned...
             </p>
           </div>
           <Image
