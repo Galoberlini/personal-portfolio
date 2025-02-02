@@ -9,7 +9,7 @@ const ubuntuSans = Ubuntu_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Galo Berlini",
+  title: "Galo Berlini Fullstack Developer",
   description: "Galo Berlini. Fullstack Developer",
 };
 
