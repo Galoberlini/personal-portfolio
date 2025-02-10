@@ -1,34 +1,39 @@
-import { ContactData } from '../data/ContactData';
+import { ContactData } from '../utils/ContactData';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function contactInfo({ contactData }: { contactData: ContactData }) {
     return (
-        <div className='flex flex-col w-3/4 mx-auto mt-10'>
-            <p>
+        <div className='flex-col mt-10'>
+            <p className='text-4xl'>
                 {contactData.title}
             </p>
-            <div className="flex flex-row items-end">
                 {contactData.dataSections.map((section, index) => (
-                    <div key={index}>
+                    <div className="flex flex-row items-end ml-5 mt-5" key={index}>
                         <Image
                             {...section.imageProps}
+                            alt={section.imageProps.alt}
                         />
                         {section.noLink ?(
                             <p className="ml-2">{section.text}</p>
                         ): 
                         (
+                            section.downloadable ? (
+                                <a href={section.link} download className='ml-2 underline hover:no-underline transition-all duration-500 ease-in-out'>
+                                    {section.text}
+                                </a>
+                            ):(
                             <Link 
                                 href={section.link}
                                 className="ml-2 underline hover:no-underline transition-all duration-500 ease-in-out"
-                                >{section.text}
+                                >
+                                {section.text}
                             </Link>
-                        )}
+                        ))}
                         {section.extraText && (
-                            <p className="ml-2">{section.extraText}</p>)}
+                            <p className="ml-1">{section.extraText}</p>)}
                     </div>
                 ))}
-            </div>
         </div>
     )
 }

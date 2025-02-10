@@ -4,7 +4,49 @@
 
 
 body {
-  color: #0a0a0a;
-  background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  --bg-color: #ffffff; 
+  --text-color: #0a0a0a; 
+  --primary-color: #ffa500; 
+  --secondary-color: #ffffff; 
+}
+
+
+[data-theme='theme1'] {
+  --bg-color: #ffffff; 
+  --text-color: #0a0a0a;
+  --primary-color: #ffa500; 
+  --secondary-color: #ffffff; 
+}
+
+
+[data-theme='theme2'] {
+  --bg-color: #2f2f2f; 
+  --text-color: #ffffff; 
+  --primary-color: #12e391; 
+  --secondary-color: #ffffff; 
+}
+
+
+[data-theme='theme3'] {
+  --bg-color: #434d56; 
+  --text-color: #ffffff; 
+  --primary-color: #00eeee; 
+  --secondary-color: #444444; 
+}
+
+:root, [data-theme="theme1"], [data-theme="theme2"], [data-theme="theme3"] {
+  transition: background-color 1s ease, 
+              color 1s ease, 
+              border-color 1s ease, 
+              box-shadow 1s ease;
 }

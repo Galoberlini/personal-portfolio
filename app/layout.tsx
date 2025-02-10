@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Ubuntu_Sans } from "next/font/google";
 import "./globals.css";
-//import Link from "next/link";
 
 const ubuntuSans = Ubuntu_Sans({
   variable: "--font-ubuntu-sans",
@@ -17,14 +16,16 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${ubuntuSans.className} antialiased`}
-      >
-        <main>{children}</main>
-      </body>
-    </html>
-  );
-}
+}>)
+{
+    return (
+      <html lang="en">
+        <body
+          className={`${ubuntuSans.className} antialiased`}
+          data-theme="theme3"
+        >
+            <main>{children}</main>
+        </body>
+      </html>
+    );
+  }

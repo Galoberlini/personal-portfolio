@@ -1,15 +1,15 @@
-import AboutMeSegment from "./about_me_segment";
-import { segments } from "../data/AboutMeSegments";
+import AboutMeSegment from "../about_me_segment";
+import { segments } from "../../utils/AboutMeSegments";
 
 export default function AboutMe() {
     return (
-        <div className="flex flex-col w-11/12 mx-auto">
-            <div className="w-full mx-auto my-8 h-1.5 bg-orange-500 rounded-full"></div>
+        <div id="about_me" className="flex flex-col w-5/6 mx-auto">
+            <div className="w-full mx-auto my-8 h-1.5 bg-primary rounded-full"></div>
             <div className="mb-10 ml-20">
                 <h1 className="text-4xl text-justify font-bold">
                     About Me
                 </h1>
-                <h2 className="text-justify text-lg text-orange-500">
+                <h2 className="text-justify text-lg text-primary">
                     A BIT ABOUT MYSELF
                 </h2>
             </div>

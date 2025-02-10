@@ -39,7 +39,7 @@ export const segments: Segment[] = [
         texts:[
             `Thanks to those 3 years, I currently have not only a strong understanding of programming
              in general (functional, imperative and OOP) but also web development as well as other
-              concepts related to the field such as databases, AI and algorithms.`,
+              concepts related to the field such as databases, data structures and algorithms.`,
             `Additionally, I've always been interested in learning new topics on my own, a few of the
             ones I've explored include finance, project management and, more recently, React.js and
             Next.js which I used to build this website!`,

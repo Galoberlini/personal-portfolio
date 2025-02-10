@@ -14,6 +14,7 @@ export type ContactDataSection = {
     text: string,
     extraText?: string,
     noLink?: boolean,
+    downloadable?: boolean
 }
 
 export const contactData: ContactData[] = [
@@ -44,7 +45,7 @@ export const contactData: ContactData[] = [
         ]
     },
     {
-        title: "Send me a message at",
+        title: "Send me a message",
         dataSections:[
             {
                 imageProps: {
@@ -69,8 +70,9 @@ export const contactData: ContactData[] = [
                     width: 30,
                     height: 30
                 },
-                link: "/files/CVGaloBerliniEn.pdf",
+                link: "/files/CVGaloBerliniEN.pdf",
                 text: "English",
+                downloadable: true
             },
             {
                 imageProps: {
@@ -81,6 +83,7 @@ export const contactData: ContactData[] = [
                 },
                 link: "/files/CVGaloBerliniES.pdf",
                 text: "Spanish",
+                downloadable: true
             }
         ]
     },
