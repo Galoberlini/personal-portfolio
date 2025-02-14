@@ -19,7 +19,6 @@ export default function AboutMe() {
                     inverted={segment.inverted}
                     imageProps={segment.imageProps}
                     texts={segment.texts}
-                    textWidth={segment.textWidth}
                 />
             ))}
         </div>

@@ -4,6 +4,7 @@ import Header from "./components/pageSections/header";
 import AboutMe from "./components/pageSections/about_me";
 import ContactFooter from "./components/pageSections/contactFooter";
 import Hero from "./components/pageSections/hero";
+import Skills from "./components/pageSections/skills";
 import { useEffect } from "react";
 
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Header/>
       <Hero/>
       <AboutMe/>
+      <Skills/>
       <ContactFooter/>
     </div>
   );

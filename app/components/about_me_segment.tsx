@@ -14,10 +14,10 @@ export default function AboutMeSegment(segment : Segment) {
                 ref={ref}
                 initial={{opacity: 0}}
                 animate={isInView ? { opacity: 1} : {}}
-                transition={{duration: 0.5, ease:"easeInOut"}}
+                transition={{duration: 0.75, ease:"easeInOut"}}
                 className={clsx("flex justify-around items-center mt-20", segment.inverted && "flex-row-reverse")}
             >
-                <div className={clsx(`w-[${segment.textWidth}]`, `text-pretty`, `text-md`, `mx-5`)}>
+                <div className="text-pretty text-md mx-5">
                     {segment.texts.map((text, index) => (
                         <p key={index} className="mt-3">{text}</p>
                     ))}

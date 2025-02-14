@@ -47,7 +47,7 @@ function CursorBlinker() {
         ease: "easeInOut",
       });
       return controls.stop;
-    }, []);
+    }, [count]);
   
     return (
       <span className="text-secondary text-6xl ml-5">

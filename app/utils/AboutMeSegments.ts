@@ -3,8 +3,7 @@ import { ImageProps } from "next/image";
 export type Segment = {
     inverted? : boolean,
     imageProps: ImageProps, 
-    texts: string[], 
-    textWidth: string
+    texts: string[]
 }
 
 export const segments: Segment[] = [
@@ -26,7 +25,6 @@ export const segments: Segment[] = [
             `Luckily for me, that turned out to be the best decision I've ever made and
             I'm proud to have graduated from IPS in 2024 as a Professional and Personal IT Technician.`
         ],
-        textWidth: "700px"
     },
     {
         inverted: true,
@@ -45,7 +43,6 @@ export const segments: Segment[] = [
             Next.js which I used to build this website!`,
             `All things considered, here are some of the tools I'm familiar with.`
         ],
-        textWidth: "700px"
     },
     {
         imageProps: {
@@ -60,9 +57,6 @@ export const segments: Segment[] = [
             `I'm more than looking forward to contribute to a project either as a collaborator or 
             as a leader with the purpose of offering your users the best experience posible.`
         ],
-        textWidth: "700px"
-
-
     }
 
 ]

@@ -13,6 +13,7 @@ export default {
         text: "var(--text-color)",
         primary: "var(--primary-color)",
         secondary: "var(--secondary-color)",
+        third: "var(--third-color)",
       },
     },
   },

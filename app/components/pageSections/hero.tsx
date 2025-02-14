@@ -53,7 +53,7 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-primary opacity-35"></div>
             </motion.div>
-            <motion.div variants={descVariants} /*transition={{delay: 0.5}}*/ className="flex flex-col gap-3 w-2/3 bg-primary">
+            <motion.div variants={descVariants} className="flex flex-col gap-3 w-2/3 bg-primary">
                 <motion.p variants={divVariants} className="text-secondary text-3xl mt-10 ml-5">
                     Hi, my name is 
                 </motion.p>
