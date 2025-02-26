@@ -1,11 +1,13 @@
 'use client'; 
 
-import Header from "./components/pageSections/header";
-import AboutMe from "./components/pageSections/about_me";
-import ContactFooter from "./components/pageSections/contactFooter";
-import Hero from "./components/pageSections/hero";
-import Skills from "./components/pageSections/skills";
+import Header from "./components/pageSections/header/header";
+import AboutMe from "./components/pageSections/aboutMe/about_me";
+import ContactFooter from "./components/pageSections/contact/contactFooter";
+// import Hero from "./components/pageSections/hero";
+import { SecondHero } from "./components/pageSections/hero";
+import Skills from "./components/pageSections/skills/skills";
 import { useEffect } from "react";
+import Projects from "./components/pageSections/projects/projects";
 
 
 export default function Home() {
@@ -18,12 +20,13 @@ export default function Home() {
   }, []); 
 
   return (
-    <div id="start">
+    <>
       <Header/>
-      <Hero/>
+      <SecondHero/>
       <AboutMe/>
+      <Projects/>
       <Skills/>
       <ContactFooter/>
-    </div>
+    </>
   );
 }

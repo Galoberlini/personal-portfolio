@@ -1,6 +1,6 @@
 import Image from "next/image";
 import clsx from "clsx";
-import { Segment } from "../utils/AboutMeSegments";
+import { Segment } from "../../../utils/AboutMeSegments";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -15,9 +15,9 @@ export default function AboutMeSegment(segment : Segment) {
                 initial={{opacity: 0}}
                 animate={isInView ? { opacity: 1} : {}}
                 transition={{duration: 0.75, ease:"easeInOut"}}
-                className={clsx("flex justify-around items-center mt-20", segment.inverted && "flex-row-reverse")}
+                className={clsx("flex justify-around items-center", segment.inverted && "flex-row-reverse")}
             >
-                <div className="text-pretty text-md mx-5">
+                <div className="text-pretty mx-5">
                     {segment.texts.map((text, index) => (
                         <p key={index} className="mt-3">{text}</p>
                     ))}

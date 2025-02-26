@@ -1,8 +1,10 @@
 'use client';
 
-import SkillsCard from "../skillsCard";
-import { FrontEndContent, BackEndContent, OtherContent } from "../skillsContent";
+import SkillsCard from "./skillsCard";
+import { FrontEndContent, BackEndContent, OtherContent } from "../../../utils/skillsContentParams";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Section from "../../section";
 
 type ContentProps = {
     handleContentChange: (index: number) => void;
@@ -26,9 +28,11 @@ export default function Skills(){
     ]
     
     return (
-       <div id="skills" className="flex items-center w-3/4 mx-auto justify-center gap-8 my-20">
-            {content[showContent]}
-       </div>
+        <Section title="Skills">
+            <AnimatePresence mode="wait">
+                {content[showContent]}
+            </AnimatePresence>
+        </Section>
     )
 }
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Ubuntu_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Galo Berlini Fullstack Developer",
   description: "Galo Berlini. Fullstack Developer",
 };
+export const viewport: Viewport = {
+  width: 'device-width',
+}
 
 export default function RootLayout({
   children,

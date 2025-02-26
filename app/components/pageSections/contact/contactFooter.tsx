@@ -1,5 +1,5 @@
-import { contactData } from "../../utils/ContactData";
-import ContactInfo from "../contactInfo";
+import { contactData } from "../../../utils/ContactData";
+import ContactInfo from "./contactInfo";
 
 
 export default function ContactFooter() {
