@@ -1,14 +1,12 @@
 import { ImageProps } from "next/image";
 
 export type Segment = {
-    inverted? : boolean,
     imageProps: ImageProps, 
     texts: string[]
 }
 
 export const segments: Segment[] = [
     { 
-        inverted: false,
         imageProps: {
             src: "/images/AboutMe1.webp",
             alt: "Images of myself",
@@ -16,8 +14,8 @@ export const segments: Segment[] = [
             height: 400
         },
         texts: [
-            `Ever since I was a kid I've been passionate about technology. At 11 years old I 
-            suddenly became obsessed with logically solving problems and puzzles. That's when
+            `Ever since I was a kid I've been passionate about technology. Then, at 11 years old I 
+            suddenly became obsessed with logically solving problems and puzzles and that's when
             I realised I could make the most of my strengths and interests as a programmer.`,
             `So, at that point I decided that the next step would be to attend “Instituto Politécnico Superior",
             one of the most demanding high schools in Rosario, Argentina, as it offers
@@ -27,12 +25,11 @@ export const segments: Segment[] = [
         ],
     },
     {
-        inverted: true,
         imageProps: {
-            src: "/images/AboutMe2.webp",
-            alt: "Images of tools and technologies",
-            width: 300,
-            height: 200
+            src: "/images/poli.png",
+            alt: "Image of Instituto Politécnico Superior",
+            width: 215,
+            height: 300
         },
         texts:[
             `Thanks to those 3 years, I currently have not only a strong understanding of programming
@@ -46,9 +43,9 @@ export const segments: Segment[] = [
     {
         imageProps: {
             src: "/images/AboutMe2.webp",
-            alt: "Still deciding what to put here",
-            width: 500,
-            height: 400
+            alt: "Images of tools and technologies",
+            width: 350,
+            height: 300
         },
         texts:[
             `Now, with strong attention to detail, I specialize on converting ideas into websites 

@@ -2,6 +2,12 @@ import { motion, AnimatePresence, wrap } from "framer-motion";
 import clsx from "clsx";
 import { projectData } from "@/app/utils/projectData";
 
+/*
+    This component is the slideshow of the project section. It contains the images of the projects and 
+    the buttons to navigate between them. The project state is update each time the user clicks on
+    one of the buttons.
+*/
+
 type SlideShowProps = {
     project: number;
     direction: number;
@@ -54,7 +60,7 @@ export default function SlideShow({project, direction, handler}: SlideShowProps)
                 animate="center"
                 exit="exit"
                 layoutId={`${project}project`}
-                className="w-full h-full max-w-[100%] object-cover"
+                className="w-full h-full max-w-[100%] object-cover rounded-md"
                 />
             </AnimatePresence>
             <div

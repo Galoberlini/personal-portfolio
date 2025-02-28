@@ -1,110 +1,81 @@
 'use client';
 
-// import { motion, useAnimate } from "framer-motion";
+import { motion, useAnimate, AnimationSequence } from "framer-motion";
 import Image from "next/image";
+import { useEffect } from "react";
 import TextAnim from "@/app/utils/animations";
 
-// const heroVariants = {
-//         start: { opacity: 0},
-//         end: {
-//             opacity: 1,
-//             transition: {
-//                 staggerChildren: 0.75,
-//                 ease:"easeInOut"
-//             },
-//         },
-// }
+/*
+    This component is the main component of the hero section. It shows an image of myself, my name and 
+    my role. It uses the useAnimate hook to animate the elements when the component is mounted.
+    In case I decide to add more elements to the animation sequence, I'd consider moving the TextAnim component
+    here. Since the animation is only used in this component and I am timing the this animation by adding delays
+    to the useAnimate hook, which is not the best practice.
+*/
 
-// const descVariants = {
-//     start: { opacity: 0},
-//     end: {
-//         opacity: 1,
-//         transition: {
-//             delayChildren: 0.5,
-//             staggerChildren: 1.5,
-//             ease:"easeInOut"
-//         },
-//     },
-// }
+export function Hero(){
 
+    const [scope, animate] = useAnimate()
 
-// const divVariants = {
-//     start: { opacity: 0},
-//     end: {
-//             opacity: 1}
-// } 
-
-
-// export default function Hero() {
-
-//     return (
-//         <motion.div 
-//         variants={heroVariants}
-//         initial="start"
-//         animate="end"
-//         id="hero" 
-//         className="flex w-screen h-[70vh] pt-12">
-//             <motion.div variants={divVariants} className="relative w-1/3">
-//                 <Image
-//                 src="/images/PictureWithoutBackground.png"
-//                 alt="Picture of myself"
-//                 fill
-//                 />
-//                 <div className="absolute inset-0 bg-primary opacity-35"></div>
-//             </motion.div>
-//             <motion.div variants={descVariants} className="flex flex-col gap-3 w-2/3 bg-third">
-//                 <motion.p variants={divVariants} className="text-text text-3xl mt-10 ml-5">
-//                     Hi, my name is 
-//                 </motion.p>
-//                 <TextAnim/>
-//                 <motion.p variants={divVariants} className="text-text text-4xl ml-5">
-//                     Fullstack Developer
-//                 </motion.p>
-//                 <motion.p variants={divVariants} className="text-text ml-5">
-//                     I enjoy creating websites that offer the best experience for its users.
-//                 </motion.p>
-//             </motion.div>
-//         </motion.div>
-//     )
-
-// }
-
-export function SecondHero(){
-
-    // const [scope, animate] = useAnimate()
-
-    // useEffect(() => {
-    //     const heroAnimation = async () => {
-    //         await animate()
-    //         await animate()
-    //         await animate()
-    //         await animate()
-    //         await animate()
-    //     }
-    //     heroAnimation()
-
-
-    // }
-    // ,[])
+    useEffect(() => {
+        
+        const imageSequence: AnimationSequence = [
+            ["#background", {opacity: 0.35},{duration:0.3,at: 1.25}],
+            ["#svg", {x:0, y:0,zIndex: 0},{duration:0.3,at: "<"}],
+            ["#img", {x:0, y:0},{duration:0.3,at: "<"}]
+        ]
+        
+        const heroAnimation = async () => {
+            await animate("#background", {opacity: 0},{duration:0})
+            await animate("#svg", {x:-10, y:-10,zIndex: 20},{duration:0})
+            await animate("#img", {x:10, y:10},{duration:0})
+            await animate("#herotext1",{opacity: 0}, {duration: 0})
+            await animate("#herotext3",{opacity: 0}, {duration: 0})
+            await animate("#imageContainer",{opacity: 1})
+            await animate(imageSequence)
+            await animate("#herotext1",{opacity: 1},{duration: 0.3,})
+            await animate("#herotext3",{opacity: 1},{duration: 0.3, delay: 0.7})
+        }
+        heroAnimation()
+    }
+    ,[animate])
     
-    //ver bg 
-    //ver donde poner svgs y que hacer con ellos, incluso ver qué svgs poner 
+    const handleHoverStart = () => { 
+        animate("#background", {opacity: 0})
+        animate("#svg", {x:-10, y:-10,zIndex: 20})
+        animate("#img", {x:10, y:10})
+    }
+    const handleHoverEnd = () => { 
+        animate("#background", {opacity: 0.35})
+        animate("#svg", {x:0, y:0,zIndex: 0})
+        animate("#img", {x:0, y:0})
+    }
+
     return (
-        <section id="hero2" className="flex justify-center items-center w-screen h-screen gap-5">
-            <div className="flex justify-self-end items-end justify-end justify-items-end  w-1/3">
-                <div className="relative w-64 h-64">
-                    <Image
-                        src="/images/PictureWithoutBackground.png"
-                        alt="Picture of myself"
-                        fill/>                                                
-                    <div className="absolute inset-0 bg-primary opacity-35"></div>
-                    <svg></svg>
-                </div>
-            </div>
-            <div className="flex flex-col items-start justify-start w-2/3 gap-5">
-                <p className="text-text text-3xl opacity-90">Hi, my name is</p>
+        <section id="Hero" ref={scope} className="flex justify-center items-center w-screen h-screen gap-20">
+            <>
+                <motion.div id="imageContainer" onHoverStart={() => handleHoverStart()} 
+                onHoverEnd={() => handleHoverEnd()}
+                className="relative w-64 h-64">
+                    <motion.svg id="svg" width="258" height="258" viewBox="0 0 258 258" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    className="absolute inset-5 z-0 stroke-current text-primary">
+                        <rect x="1" y="1" width="256" height="256" stroke="currentColor" strokeWidth="2" fill="none" rx="6" ry="6" />
+                    </motion.svg>
+                    <div id="img"
+                    className="w-full h-full rounded-md">                
+                        <Image
+                            src="/images/PictureWithoutBackground.png"
+                            alt="Picture of myself"
+                            fill
+                            className="rounded-md"/>                                                
+                        <div id="background" className="absolute inset-0 bg-primary opacity-35 rounded-md"></div>
+                    </div>
+                </motion.div>
+            </>
+            <div className="flex flex-col items-start justify-start gap-5">
+                <p id="herotext1" className="text-text text-3xl opacity-90">Hi, my name is</p>
                 <TextAnim/>
-                <p className="text-text text-7xl opacity-70">Fullstack Developer</p>
+                <p id="herotext3" className="text-text text-7xl opacity-70">Fullstack Developer</p>
             </div>
         </section>
     )

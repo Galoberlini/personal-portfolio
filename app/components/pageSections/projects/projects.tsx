@@ -1,5 +1,12 @@
 'use cleint';
 
+/*
+    This component is the projects section, it contains a slideshow and a text section.
+    The slideshow is used to show the images of the projects and to navigate between them.
+    Each time the user clicks on the next or previous button, the project state is updated
+    which is responsible for showing the correct image and text.
+*/
+
 import { AnimatePresence, motion, wrap} from "framer-motion";
 import { useState } from "react";
 import { projectData } from "@/app/utils/projectData";
@@ -38,9 +45,9 @@ export default function Projects(){
                     animate="animate"
                     exit="exit" 
                     className="mx-10 min-h-96 ">
-                        <p id="projectTitle"className="text-3xl">
+                        <h3 id="projectTitle"className="text-3xl">
                             {projectData[imageIndex].title}
-                        </p>
+                        </h3>
                         {projectData[imageIndex].texts.map((text,i) => 
                         <p id="projectText" key={`${i} text`}>
                             {text}

@@ -22,6 +22,7 @@ function CursorBlinker() {
     return (
         
       <motion.div
+        aria-hidden="true"
         variants={cursorVariants}
         onAnimationComplete={() => setVisible(false)}
         animate="blinking"
@@ -50,9 +51,9 @@ function CursorBlinker() {
     }, [count]);
   
     return (
-      <span className="text-text text-8xl opacity-90">
+      <h1 className="text-text text-8xl opacity-90">
         <motion.span>{displayText}</motion.span>
-        <CursorBlinker />
-      </span>
+        <CursorBlinker/>
+      </h1>
     );
   }
