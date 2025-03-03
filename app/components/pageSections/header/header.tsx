@@ -1,3 +1,5 @@
+'use client';
+
 import { DarkModeButton } from "./themeButton";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import { headerLinks } from "@/app/utils/headerData";

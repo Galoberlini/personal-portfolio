@@ -1,4 +1,4 @@
-'use cleint';
+'use client';
 
 /*
     This component is the projects section, it contains a slideshow and a text section.
@@ -7,8 +7,8 @@
     which is responsible for showing the correct image and text.
 */
 
-import { AnimatePresence, motion, wrap} from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion, wrap, useInView} from "framer-motion";
+import { useState, useRef } from "react";
 import { projectData } from "@/app/utils/projectData";
 import SlideShow from "./slideShow";
 import Section from "../../section"
@@ -29,6 +29,9 @@ const textVariants = {
 export default function Projects(){
     
     const [[project, direction], SetProject] = useState([0,0])
+
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
        
     const handleProjectChange = (direction : number) => {
         SetProject([project + direction, direction])
@@ -37,7 +40,12 @@ export default function Projects(){
 
     return (
         <Section title="Projects">       
-            <div className="flex justify-center items-center w-full h-full">
+            <motion.div
+            ref={ref}
+            initial={{opacity: 0}}
+            animate={isInView ? { opacity: 1} : {}}
+            transition={{duration: 0.75, ease:"easeInOut"}} 
+            className="flex justify-center items-center w-full h-full">
                 <AnimatePresence mode="wait">    
                     <motion.div variants={textVariants}
                     key={projectData[imageIndex].title}
@@ -56,7 +64,8 @@ export default function Projects(){
                     </motion.div>
                 </AnimatePresence>
                 <SlideShow project={project} direction={direction} handler={handleProjectChange}/>
-            </div>
+            </motion.div>
+            
         </Section>
     )
 }

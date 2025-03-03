@@ -7,8 +7,8 @@ import { ReactNode } from "react";
 
 export default function Section({title, children}: {title: string, children: ReactNode}){
     return (
-        <section id={title} className="section">
-            <div className="flex items-center pb-20">
+        <section className="section">
+            <div id={title} className="flex items-center pb-20 pt-5">
                 <svg className="w-1/12 mx-auto h-1 bg-primary rounded-full">
                     <rect width="100%" height="1" className="fill-primary"/>
                 </svg>                   

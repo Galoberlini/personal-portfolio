@@ -18,8 +18,8 @@ export const segments: Segment[] = [
             suddenly became obsessed with logically solving problems and puzzles and that's when
             I realised I could make the most of my strengths and interests as a programmer.`,
             `So, at that point I decided that the next step would be to attend “Instituto Politécnico Superior",
-            one of the most demanding high schools in Rosario, Argentina, as it offers
-            the best foundation in IT with its three-year specialization.`,
+            one of the most demanding high schools in Rosario, Argentina, as it offers the best foundation
+            in IT with its three-year specialization.`,
             `Luckily for me, that turned out to be the best decision I've ever made and
             I'm proud to have graduated from IPS in 2024 as a Professional and Personal IT Technician.`
         ],

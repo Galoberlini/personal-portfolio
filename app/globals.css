@@ -2,34 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
+html {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
-html {
+body {
   scroll-behavior: smooth;
 }
-
 
 :root {
   --bg-color: #ffffff; 
   --text-color: #0a0a0a; 
+  --primary-color: #aa5000; 
+  --secondary-color: #ffffff;
+  --third-color: #F1F5F9;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1E293B; 
+  --text-color: #ffffff; 
+  --primary-color: #00cccc; 
+  --secondary-color: #444444; 
+  --third-color: #152238;
+}
+
+[data-theme='light'] {
+  --bg-color: #ffffff; 
+  --text-color: #0a0a0a; 
   --primary-color: #ffa500; 
   --secondary-color: #ffffff;
-  --third-color: #F1F5F9
+  --third-color: #F1F5F9;
 }
 
 ol,
 p,
 ul,
 h3 {
-  margin-bottom:1rem
+  margin-bottom: 1rem;
 }
 
-.section{
-  position:relative;
+.section {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,54 +53,28 @@ h3 {
   margin-right: auto;
 }
 
-[data-theme='theme1'] {
-  --bg-color: #ffffff; 
-  --text-color: #0a0a0a;
-  --primary-color: #ffa500; 
-  --secondary-color: #ffffff;
-  --third-color: #F1F5F9
-}
-
-
-[data-theme='theme2'] {
-  --bg-color: #1E293B; 
-  --text-color: #ffffff; 
-  --primary-color: #00eeee; 
-  --secondary-color: #444444; 
-  --third-color: #152238
-}
-
-:root, [data-theme="theme1"], [data-theme="theme2"], [data-theme="theme3"] {
-  transition: background-color 1s ease, 
-              color 1s ease, 
-              border-color 1s ease, 
-              box-shadow 1s ease;
-               
-}
-
-@media (min-width:640px) {
-  .section{
-    max-width:640px
-  }
-}
-
-@media (min-width:768px) {
-  .section{
-    max-width:768px
-  }
-}
-
-@media (min-width:1024px) {
+@media (min-width: 640px) {
   .section {
-    max-width:1024px
+    max-width: 640px;
   }
 }
 
+@media (min-width: 768px) {
+  .section {
+    max-width: 768px;
+  }
+}
 
-@media (min-width:1280px) {
-  .section{
-    min-height:620px;
-    max-height:1440px;
-    max-width:1280px;
+@media (min-width: 1024px) {
+  .section {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    min-height: 620px;
+    max-height: 1440px;
+    max-width: 1280px;
   }
 }

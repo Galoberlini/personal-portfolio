@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import clsx from "clsx";
 import { Segment } from "../../../utils/AboutMeSegments";
@@ -18,11 +20,11 @@ export default function AboutMeSegment({segment, inverted} : {segment:Segment, i
     return (
         <>
             <motion.div 
-                ref={ref}
-                initial={{opacity: 0}}
-                animate={isInView ? { opacity: 1} : {}}
-                transition={{duration: 0.75, ease:"easeInOut"}}
-                className={clsx("flex justify-around items-center", inverted && "flex-row-reverse")}
+            ref={ref}
+            initial={{opacity: 0}}
+            animate={isInView ? { opacity: 1} : {}}
+            transition={{duration: 0.75, ease:"easeInOut"}}
+            className={clsx("flex justify-around items-center", inverted && "flex-row-reverse")}
             >
                 <div className="text-pretty mx-5">
                     {segment.texts.map((text, index) => (

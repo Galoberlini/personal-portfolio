@@ -1,6 +1,6 @@
 'use client';
 
-import { usePresence, useAnimate, stagger } from "framer-motion"
+import { usePresence, useAnimate, stagger, motion } from "framer-motion"
 import { SkillsContent, FrontEndContentParams, BackEndContentParams, PersonalSKillsContentParams } from "../../../utils/skillsContentParams";
 import { useEffect, useCallback } from "react";
 
@@ -17,10 +17,11 @@ export function ContentGen ({content, handler}: {content:SkillsContent, handler:
     const [scope, animate] = useAnimate()
 
     const enterAnimation = useCallback(async () => {
-        await animate(scope.current, { opacity: 0 }, { duration: 0 });
-        await animate("li", { opacity: 0, y: -20 }, { duration: 0 });
-        await animate("#Top", { opacity: 0 }, { duration: 0 });
-        await animate("#svg", { opacity: 0 }, { duration: 0 });
+        await animate([
+            ["li", { opacity: 0, y: -20 }, { duration: 0, at: 0 }],
+            ["#Top", { opacity: 0 }, { duration: 0, at: "<" }],
+            ["#svg", { opacity: 0 }, { duration: 0, at: "<" }]
+        ]);
         await animate(scope.current, { opacity: 1, x: 0 });
         await animate("#Top", { opacity: 1 });
         await animate("li", { opacity: 1, y: 0 }, { delay: stagger(0.1) });
@@ -47,7 +48,11 @@ export function ContentGen ({content, handler}: {content:SkillsContent, handler:
         }
       }, [isPresent, enterAnimation, exitAnimation]);
     return (
-        <div key={content.title} ref={scope} className="relative flex flex-col self-center w-3/4 bg-third rounded-3xl p-3">
+        <motion.div
+        key={content.title}
+        ref={scope}
+        initial={{opacity:0}}
+        className="relative flex flex-col self-center w-3/4 bg-third rounded-3xl p-3">
                 <div id="Top" className="flex flex-row justify-between">
                     <h3 className="text-3xl text-primary ml-20 mb-8">{content.title}</h3>
                     <button onClick={() => handler(0)} className="flex items-center justify-center bg-third size-7 rounded-full hover:bg-secondary">
@@ -73,7 +78,7 @@ export function ContentGen ({content, handler}: {content:SkillsContent, handler:
                 <div id="svg" className="absolute bottom-3 right-3">
                     {content.svgIcon}
                 </div>
-        </div>
+        </motion.div>
     )
 }
 

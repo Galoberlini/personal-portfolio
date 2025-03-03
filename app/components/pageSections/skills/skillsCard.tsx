@@ -33,7 +33,7 @@ export default function SkillsCard({handler, Cards}:{handler:(index: number) => 
             className="flex flex-col items-center justify-center gap-5 pt-4 size-64 bg-primary rounded-3xl cursor-pointer"
             >
                 {card.svgIcon}
-                <p className="text-text">
+                <p className="text-white">
                     {card.title}
                 </p>
             </motion.div>
