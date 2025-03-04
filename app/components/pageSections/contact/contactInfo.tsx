@@ -42,7 +42,7 @@ export default function ContactInfo({ contactData }: { contactData: ContactData 
                 {contactData.title}
             </p>
             {contactData.dataSections.map((section, index) => (
-            <div className="flex flex-row items-end ml-5 mt-3" key={index}>
+            <div className="flex flex-row ml-5 mt-3" key={index}>
                 {section.svg}
                 {!section.link ?(
                 <>

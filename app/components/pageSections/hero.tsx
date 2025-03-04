@@ -21,15 +21,13 @@ export function Hero(){
         
         const imageSequence: AnimationSequence = [
             ["#background", {opacity: 0.35},{duration:0.3,at: 1.25}],
-            ["#svg", {x:0, y:0,zIndex: 20},{duration:0.3,at: "<"}],
+            ["#svg", {x:0, y:0, opacity:1},{duration:0.3,at: "<"}],
             ["#img", {x:0, y:0},{duration:0.3,at: "<"}]
         ]
         
         const heroAnimation = async () => {
             await animate([
                 ["#background", { opacity: 0 }, { duration: 0 }],
-                ["#svg", { x: -10, y: -10, zIndex: 20 }, { duration: 0 }],
-                ["#img", { x: 10, y: 10, zIndex: -10 }, { duration: 0 }],
                 ["#herotext1", { opacity: 0 }, { duration: 0 }],
                 ["#herotext3", { opacity: 0 }, { duration: 0 }]
             ]);
@@ -53,7 +51,7 @@ export function Hero(){
     }
 
     return (
-        <section id="Hero" ref={scope} className="hero lg:flex-row lg:gap-20 xs:max-[410px]:pt-[5rem] lg:pt-0 lg:pb-6">
+        <section id="Hero" ref={scope} className="hero lg:flex-row lg:gap-20 xs:max-[410px]:pt-[rem] lg:pt-0 lg:pb-6">
             <motion.div id="imageContainer"
             key="HeroImg"
             onHoverStart={() => handleHoverStart()} 
@@ -66,12 +64,12 @@ export function Hero(){
                 viewBox="0 0 258 258"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                initial={{ x: -10, y: -10, zIndex: 20 }}
+                initial={{ x: -10, y: -10, opacity:0}}
                 className="absolute inset-5 z-0 stroke-current text-primary">
                     <rect x="1" y="1" width="256" height="256" stroke="currentColor" strokeWidth="2" fill="none" rx="6" ry="6" />
                 </motion.svg>
                 <motion.div id="img"
-                initial={{ x: 10, y: 10, zIndex: -10 }}
+                initial={{ x: 10, y: 10}}
                 className="w-full h-full rounded-md z-20">                
                     <Image
                         src="/images/PictureWithoutBackground.png"
