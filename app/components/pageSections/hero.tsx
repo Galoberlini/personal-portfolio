@@ -56,6 +56,8 @@ export function Hero(){
             key="HeroImg"
             onHoverStart={() => handleHoverStart()} 
             onHoverEnd={() => handleHoverEnd()}
+            onTouchStart={() => handleHoverStart()}
+            onTouchEnd={() => handleHoverEnd()}
             className="relative w-64 h-64">
                 <motion.svg id="svg"
                 key="herosvg"

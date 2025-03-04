@@ -53,7 +53,7 @@ export default function SlideShow({project, direction, handler}: SlideShowProps)
 
 
     return (
-        <div className="relative w-5/6 h-60 sm:min-w-96 sm:h-80 overflow-hidden">
+        <div className="relative w-5/6 h-60 sm:min-w-96 sm:h-80 min-[1410px]:max-w-[24rem] overflow-hidden">
             <AnimatePresence custom={direction} initial={false} mode="wait">
                 <motion.img
                 key={project}

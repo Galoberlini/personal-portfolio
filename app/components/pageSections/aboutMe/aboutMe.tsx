@@ -10,7 +10,7 @@ import Section from "../../section";
 export default function AboutMe() {
     return (
         <Section title="About Me">
-            <div className="flex flex-col gap-8 md:gap-16">
+            <div className="flex flex-col gap-6 md:gap-16">
             {segments.map((segment, index) => (
                 <AboutMeSegment
                     key={index}

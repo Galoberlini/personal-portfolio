@@ -11,8 +11,9 @@ import ContactInfo from "./contactInfo";
 
 export default function ContactFooter() {
     return (
-        <footer id="contact_footer" className="section mt-36 mb-16">
-            <h2 className="text-center text-5xl">
+        <footer className="section !justify-center !gap-10 mt-36 mb-16">
+            <h2 id="contact_footer" 
+            className="text-center text-5xl">
                 ¿Want to get in contact?
             </h2>
             <nav className="w-3/4 mx-auto">
