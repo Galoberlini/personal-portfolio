@@ -6,7 +6,7 @@ export type LinksParams = {
 
 export const headerLinks : LinksParams[] = [
     {
-        text: "About Me",
+        text: "About",
         href: "#About Me"
     },
     {

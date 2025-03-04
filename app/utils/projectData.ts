@@ -48,7 +48,7 @@ export const projectData : ProjectData[] = [
             avoiding unnecessary renders and generating code that is readable and easy to understand are some of
             the best practices I tried to implement.`,
             `I definitely learnt a lot from this project. Not only was I able to experiment with technologies I 
-            was already familiar with about but I also to learnt new tools such as Framer Motion. I reckon it is likely 
+            was already familiar with about but also to learn new tools such as Framer Motion. I reckon it is likely 
             that there are numerous mistakes or areas that could be further optimized. Hopefully as time goes on I will
             improve my skills as a coder and be able to use this website to track my progress.`,
         ],

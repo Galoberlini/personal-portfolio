@@ -24,7 +24,7 @@ export default function AboutMeSegment({segment, inverted} : {segment:Segment, i
             initial={{opacity: 0}}
             animate={isInView ? { opacity: 1} : {}}
             transition={{duration: 0.75, ease:"easeInOut"}}
-            className={clsx("flex justify-around items-center", inverted && "flex-row-reverse")}
+            className={clsx("flex flex-col lg:flex-row justify-around items-center", inverted && "lg:flex-row-reverse")}
             >
                 <div className="text-pretty mx-5">
                     {segment.texts.map((text, index) => (

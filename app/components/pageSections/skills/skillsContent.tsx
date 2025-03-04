@@ -52,7 +52,7 @@ export function ContentGen ({content, handler}: {content:SkillsContent, handler:
         key={content.title}
         ref={scope}
         initial={{opacity:0}}
-        className="relative flex flex-col self-center w-3/4 bg-third rounded-3xl p-3">
+        className="relative flex flex-col self-center w-auto lg:w-3/4 bg-third rounded-3xl p-3">
                 <div id="Top" className="flex flex-row justify-between">
                     <h3 className="text-3xl text-primary ml-20 mb-8">{content.title}</h3>
                     <button onClick={() => handler(0)} className="flex items-center justify-center bg-third size-7 rounded-full hover:bg-secondary">

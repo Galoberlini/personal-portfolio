@@ -21,16 +21,17 @@ export default function SkillsCard({handler, Cards}:{handler:(index: number) => 
         initial={{opacity:0}}
         animate={{opacity:1}}
         transition={{duration: 0.5, ease: "easeInOut"}}
-        className="flex flex-row gap-8 justify-center"
+        className="flex flex-col items-center sm:flex-row gap-4 sm:gap-8 justify-center"
         >
             {Cards.map((card, i) => 
             <motion.div
             key={card.title}
             initial={{y: 60}}
             animate={isInView ? {y: 0} : {}}
-            whileHover={{y: -20}}
+            whileHover={{scale: 1.05}}
+            whileTap={{scale: 0.95}}
             onClick={() => handler(i+1)}
-            className="flex flex-col items-center justify-center gap-5 pt-4 size-64 bg-primary rounded-3xl cursor-pointer"
+            className="flex flex-col items-center justify-center gap-5 pt-4 size-40 sm:size-64 bg-primary rounded-3xl cursor-pointer"
             >
                 {card.svgIcon}
                 <p className="text-white">

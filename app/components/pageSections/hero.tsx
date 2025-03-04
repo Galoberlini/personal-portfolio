@@ -53,7 +53,7 @@ export function Hero(){
     }
 
     return (
-        <section id="Hero" ref={scope} className="flex justify-center items-center w-screen h-screen gap-20">
+        <section id="Hero" ref={scope} className="hero lg:flex-row lg:gap-20 xs:max-[410px]:pt-[5rem] lg:pt-0 lg:pb-6">
             <motion.div id="imageContainer"
             key="HeroImg"
             onHoverStart={() => handleHoverStart()} 
@@ -61,8 +61,8 @@ export function Hero(){
             className="relative w-64 h-64">
                 <motion.svg id="svg"
                 key="herosvg"
-                width="258"
-                height="258"
+                width="100%"
+                height="100%"
                 viewBox="0 0 258 258"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,16 +84,16 @@ export function Hero(){
                     className="absolute inset-0 bg-primary opacity-35 rounded-md"></motion.div>
                 </motion.div>
             </motion.div>
-            <div className="flex flex-col items-start justify-start gap-5">
+            <div className="flex flex-col items-center text-center lg:items-start gap-4">
                 <motion.p id="herotext1" 
                 initial={{ opacity: 0 }}
-                className="text-text text-3xl opacity-90">
+                className="text-text text-2xl lg:text-3xl opacity-90 mb-0">
                     Hi, my name is
                 </motion.p>
                 <TextAnim/>
                 <motion.p id="herotext3"
                 initial={{ opacity: 0 }}
-                className="text-text text-7xl opacity-70">Fullstack Developer</motion.p>
+                className="text-text text-5xl  lg:text-7xl opacity-70">Fullstack Developer</motion.p>
             </div>
         </section>
     )

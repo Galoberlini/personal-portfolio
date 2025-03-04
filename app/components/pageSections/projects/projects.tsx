@@ -45,14 +45,14 @@ export default function Projects(){
             initial={{opacity: 0}}
             animate={isInView ? { opacity: 1} : {}}
             transition={{duration: 0.75, ease:"easeInOut"}} 
-            className="flex justify-center items-center w-full h-full">
+            className="flex flex-col lg:flex-row justify-center items-center w-full h-full">
                 <AnimatePresence mode="wait">    
                     <motion.div variants={textVariants}
                     key={projectData[imageIndex].title}
                     initial="initial"
                     animate="animate"
                     exit="exit" 
-                    className="mx-10 min-h-96 ">
+                    className="mx-5 lg:mx-10 min-h-96 ">
                         <h3 id="projectTitle"className="text-3xl">
                             {projectData[imageIndex].title}
                         </h3>

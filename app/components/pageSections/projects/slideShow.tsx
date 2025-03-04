@@ -41,6 +41,11 @@ const variants = {
     }
 };
 
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
+};
+
 export default function SlideShow({project, direction, handler}: SlideShowProps){
     
 
@@ -48,7 +53,7 @@ export default function SlideShow({project, direction, handler}: SlideShowProps)
 
 
     return (
-        <div className="relative min-w-96 h-80 overflow-hidden">
+        <div className="relative w-5/6 h-60 sm:min-w-96 sm:h-80 overflow-hidden">
             <AnimatePresence custom={direction} initial={false} mode="wait">
                 <motion.img
                 key={project}
@@ -61,6 +66,21 @@ export default function SlideShow({project, direction, handler}: SlideShowProps)
                 exit="exit"
                 layoutId={`${project}project`}
                 className="w-full h-full max-w-[100%] object-cover rounded-md"
+                transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 }
+                  }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset, velocity }) => {
+                    const swipe = swipePower(offset.x, velocity.x);
+                    if (swipe < -swipeConfidenceThreshold) {
+                        handler(1);
+                    } else if (swipe > swipeConfidenceThreshold) {
+                        handler(-1);
+                    }
+                    }}
                 />
             </AnimatePresence>
             <div

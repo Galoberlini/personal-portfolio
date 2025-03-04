@@ -14,7 +14,8 @@ import { useState } from "react";
 	of the page, additionally this allows me to trigger a custom animation when the user scrolls to the top.
 	The third one is the clickButton state, it's used to hide the header when the user clicks on a link,
 	otherwise the header would be visible if the user clicks the link of a section that is above the current
-	position of the page.
+	position of the page. The "Galo Berlini" button is separated from the other buttons if the screen is +1024px
+	wide
 */
 
 
@@ -80,16 +81,15 @@ export default function Header(){
 			}}
 			animate={hidden || clickButton ? "hidden" : start ? "visibleStart" : "visible"}
 			transition={{duration: 0.25, ease: "easeInOut"}} 
-			className="fixed top-0 left-0 h-12 bg-bg z-50 flex justify-between items-center w-full p-1 "> 
-				<motion.div 
+			className="headerNav lg:justify-between"> 
+				<motion.a href="#Hero"
 				variants={titleVariants}
 				initial="initial"
-				animate="animate">
-					<a href="#Hero" className="text-text hover:bg-third hover:rounded-xl text-sm p-2 ml-6">
-						Galo Berlini
-					</a>
-				</motion.div>
-				<div className="flex justify-center gap-5">
+				animate="animate"
+				className="text-text hover-button text-sm p-2 lg:ml-6">
+					Galo Berlini
+				</motion.a>
+				<div className="flex justify-center gap-5 xs:max-lg:hidden">
 				{headerLinks.map((link, i) => (
 					<motion.div
 					key={i}
@@ -100,19 +100,42 @@ export default function Header(){
 					>
 						<a href={link.href}
 						onClick={() => handleClickButton()}
-						className="text-text hover:bg-third hover:rounded-xl text-sm p-2 ml-3 rounded">
+						className="text-text hover-button text-sm p-2 ml-3 rounded">
 							{link.text}
 						</a>
                   	</motion.div>
 				))}
 					<motion.div 
-					custom={5} 
+					custom={headerLinks.length} 
 					variants={linkVariants}
 					initial="initial"
 					animate="animate">
 						<DarkModeButton/>
 					</motion.div>
             	</div>
+				{headerLinks.map((link, i) => (
+					<motion.div
+					key={i}
+					custom={i} 
+					variants={linkVariants}
+					initial="initial"
+					animate="animate"
+					className="lg:hidden">
+						<a href={link.href}
+						onClick={() => handleClickButton()}
+						className="text-text hover:bg-third hover:rounded-xl text-sm p-2 ml-3 rounded">
+							{link.text}
+						</a>
+                  	</motion.div>
+				))}
+					<motion.div 
+					custom={headerLinks.length} 
+					variants={linkVariants}
+					initial="initial"
+					animate="animate"
+					className="lg:hidden xs:max-[410px]:order-first">
+						<DarkModeButton/>
+					</motion.div>
          	 </motion.nav> 
      	</header>
     )
