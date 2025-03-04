@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio personal desarrollado con Next.js
 
-## Getting Started
+## Idea 
+Este proyecto tiene como oobjetivo desarrollar mi primera página web utilizando Next.js, un framework que aprendí recientemente. El mismo me permitió poner en práctica herramientas que he aprendido a utilizar recientemente, repasar conceptos que he visto previamente y adquirir conocimientos sobre temas nuevos. Además, uno de mis principales objetivos como programador y desarrollador web es mejorar continuamente la calidad del código que hago. Por lo que, gracias a este proyecto pude ver que áreas necesito mejorar y que buenas prácticas puedo implementar a futuro. 
 
-First, run the development server:
+## Herramientas utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Stack principal
+- Next.js
+- Typescript
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Estilos + UI
+- Tailwind CSS
+- Framer Motion
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## "Valor" del proyecto / lo que aprendí
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Conocimientos afianzados:
+- HTML
+- CSS
+- Tailwind CSS
+- React.js
+- Javascript
 
-## Learn More
+### Herramientas / tecnologías / librerías puestas en práctica por primera vez
+- Next.js
+- Typescript (conozco y he utilizado otros lenguajes tipados pero es la primera vez que uso este en concreto)
+- Framer Motion
 
-To learn more about Next.js, take a look at the following resources:
+### Conceptos investigados / repasados / aprendidos
+- Optimización de SEO
+- Diseño responsivo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Reconozco que este proyecto prácticamente no se aprovecha del uso de Next.js. Debido a esto, decidí que en el próximo proyecto que realice intentaré de implementar la mayor cantidad de características avanzadas de dicho framework.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Versiones
 
-## Deploy on Vercel
+### v1.0 (actual)
+- Primera versión del portfolio con Next.js, TypeScript y Tailwind
+- Cuenta con las secciones:
+    - Acerca de
+    - Proyectos
+    - Skills
+- Desplegada en vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### v1.1 (próxima actualización)
+- Mejora visual de la página en general
+- Mayor optimización de SEO
+- Mayor optimización de código (css, hooks, etc)
