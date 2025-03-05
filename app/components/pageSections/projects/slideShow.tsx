@@ -1,6 +1,6 @@
 import { motion, AnimatePresence, wrap } from "framer-motion";
 import clsx from "clsx";
-import { projectData } from "@/app/utils/projectData";
+import { projectData } from "@/app/data/projectData";
 
 /*
     This component is the slideshow of the project section. It contains the images of the projects and 

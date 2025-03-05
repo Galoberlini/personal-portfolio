@@ -52,8 +52,8 @@ export const projectData : ProjectData[] = [
             that there are numerous mistakes or areas that could be further optimized. Hopefully as time goes on I will
             improve my skills as a coder and be able to use this website to track my progress.`,
         ],
-            src: "/images/AboutMe2.webp",
-            alt: "Personal portfolio screenshot"
+            src: "/images/PortfolioTools.png",
+            alt: "Tools I have used to build this website"
     }, 
     { 
         title: "Producer of a videogame prototype",

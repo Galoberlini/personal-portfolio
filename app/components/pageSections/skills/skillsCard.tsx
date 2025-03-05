@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react";
-import { SkillsCards } from "../../../utils/skillsContentParams"; 
+import { SkillsCards } from "../../../data/skillsContentParams"; 
 
 /* 
     This component is the one that shows the cards with the skills that the user can click on.
@@ -40,7 +40,5 @@ export default function SkillsCard({handler, Cards}:{handler:(index: number) => 
             </motion.div>
             )}
         </motion.div>
-        
-        
     )
 }

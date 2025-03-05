@@ -1,6 +1,6 @@
 'use client';
 
-import { ContactData } from '../../../utils/ContactData';
+import { ContactData } from '../../../data/ContactData';
 import { useState} from 'react';
 
 /*

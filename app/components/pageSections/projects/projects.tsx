@@ -9,7 +9,7 @@
 
 import { AnimatePresence, motion, wrap, useInView} from "framer-motion";
 import { useState, useRef } from "react";
-import { projectData } from "@/app/utils/projectData";
+import { projectData } from "@/app/data/projectData";
 import SlideShow from "./slideShow";
 import Section from "../../section"
 

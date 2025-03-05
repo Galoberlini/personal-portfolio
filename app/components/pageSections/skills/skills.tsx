@@ -8,7 +8,7 @@
 */
 
 import SkillsCard from "./skillsCard";
-import { CardParams } from "../../../utils/skillsContentParams";
+import { CardParams } from "../../../data/skillsContentParams";
 import {  FrontEndContent, BackEndContent, OtherContent} from "./skillsContent"
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";

@@ -28,7 +28,7 @@ Este proyecto tiene como oobjetivo desarrollar mi primera página web utilizando
 - Framer Motion
 
 ### Conceptos investigados / repasados / aprendidos
-- Optimización de SEO
+- Optimización de SEO ()
 - Diseño responsivo
 
 Reconozco que este proyecto prácticamente no se aprovecha del uso de Next.js. Debido a esto, decidí que en el próximo proyecto que realice intentaré de implementar la mayor cantidad de características avanzadas de dicho framework.
@@ -45,5 +45,5 @@ Reconozco que este proyecto prácticamente no se aprovecha del uso de Next.js. D
 
 ### v1.1 (próxima actualización)
 - Mejora visual de la página en general
-- Mayor optimización de SEO
 - Mayor optimización de código (css, hooks, etc)
+- Mejora de accesibilidad y SEO (en caso de que vea que no benefician mucho a la página, experimentaré con estos conceptos en otro proyecto)

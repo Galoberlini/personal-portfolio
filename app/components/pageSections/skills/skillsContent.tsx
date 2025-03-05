@@ -1,7 +1,7 @@
 'use client';
 
 import { usePresence, useAnimate, stagger, motion } from "framer-motion"
-import { SkillsContent, FrontEndContentParams, BackEndContentParams, PersonalSKillsContentParams } from "../../../utils/skillsContentParams";
+import { SkillsContent, FrontEndContentParams, BackEndContentParams, PersonalSKillsContentParams } from "../../../data/skillsContentParams";
 import { useEffect, useCallback } from "react";
 
 /* 
@@ -10,6 +10,10 @@ import { useEffect, useCallback } from "react";
     Each content section consists of: First a row with the title and a button that uses the handler function.
     Then a list of items with a square svg icon and the text content. Finally, a svg icon at the 
     bottom right cornet of the card.    
+
+    I'm using the useAnimate hook to easily orchestrate the animations. Using animation sequences may be a more
+    efficient approach than this one, however, with this hook I don't have to worry about the timing of each 
+    animation.
 */
 
 export function ContentGen ({content, handler}: {content:SkillsContent, handler:(index: number) => void;}) {
@@ -47,14 +51,16 @@ export function ContentGen ({content, handler}: {content:SkillsContent, handler:
           exitAnimation();
         }
       }, [isPresent, enterAnimation, exitAnimation]);
+
     return (
         <motion.div
         key={content.title}
         ref={scope}
         initial={{opacity:0}}
         className="relative flex flex-col self-center w-auto lg:w-3/4 bg-third rounded-3xl p-3">
+                {/* The title and the exit button are located in the same row */}
                 <div id="Top" className="flex flex-row justify-between">
-                    <h3 className="text-3xl text-primary ml-20 mb-8">{content.title}</h3>
+                    <h3 className="text-3xl text-primary ml-5 lg:ml-20 mb-8">{content.title}</h3>
                     <button onClick={() => handler(0)} className="flex items-center justify-center bg-third size-7 rounded-full hover:bg-secondary">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -75,9 +81,7 @@ export function ContentGen ({content, handler}: {content:SkillsContent, handler:
                         </div>
                         )}
                 </ol>
-                <div id="svg" className="absolute bottom-3 right-3">
-                    {content.svgIcon}
-                </div>
+                {content.svgIcon}
         </motion.div>
     )
 }

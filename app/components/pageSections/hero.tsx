@@ -3,13 +3,13 @@
 import { motion, useAnimate, AnimationSequence } from "framer-motion";
 import Image from "next/image";
 import { useEffect } from "react";
-import TextAnim from "@/app/utils/animations";
+import TextAnim from "@/app/data/animations";
 
 /*
     This component is the main component of the hero section. It shows an image of myself, my name and 
     my role. It uses the useAnimate hook to animate the elements when the component is mounted.
     In case I decide to add more elements to the animation sequence, I'd consider moving the TextAnim component
-    here. Since the animation is only used in this component and I am timing the this animation by adding delays
+    here. Since the animation is only used in this component, I am timing the this animation by adding delays
     to the useAnimate hook, which is not the best practice.
 */
 
@@ -52,15 +52,15 @@ export function Hero(){
 
     return (
         <section id="Hero" ref={scope} className="hero lg:flex-row lg:gap-20 xs:max-[410px]:pt-[rem] lg:pt-0 lg:pb-6">
-            <motion.div id="imageContainer"
-            key="HeroImg"
+            {/* Div that contains everything related to the image */}
+            <motion.div
             onHoverStart={() => handleHoverStart()} 
             onHoverEnd={() => handleHoverEnd()}
             onTouchStart={() => handleHoverStart()}
             onTouchEnd={() => handleHoverEnd()}
             className="relative w-64 h-64">
+                {/* Outline SVG*/}
                 <motion.svg id="svg"
-                key="herosvg"
                 width="100%"
                 height="100%"
                 viewBox="0 0 258 258"
@@ -68,20 +68,27 @@ export function Hero(){
                 xmlns="http://www.w3.org/2000/svg"
                 initial={{ x: -10, y: -10, opacity:0}}
                 className="absolute inset-5 z-0 stroke-current text-primary">
-                    <rect x="1" y="1" width="256" height="256" stroke="currentColor" strokeWidth="2" fill="none" rx="6" ry="6" />
+                    <rect x="1" y="1" width="256" height="256" stroke="currentColor" strokeWidth="2.25" fill="none" rx="6" ry="6" />
                 </motion.svg>
                 <motion.div id="img"
                 initial={{ x: 10, y: 10}}
-                className="w-full h-full rounded-md z-20">                
+                className="w-full h-full z-20 rounded-lg">                
                     <Image
                         src="/images/PictureWithoutBackground.png"
                         alt="Picture of myself"
                         fill
-                        className="rounded-md"/>                                                
-                    <motion.div 
+                        className="rounded-lg"/>                                                
+                    {/* Semi-transparent background SVG*/}
+                    <motion.svg 
                     id="background"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 256 256"
+                    xmlns="http://www.w3.org/2000/svg" 
                     initial={{ opacity: 0 }}
-                    className="absolute inset-0 bg-primary opacity-35 rounded-md"></motion.div>
+                    className="absolute inset-0 bg-primary opacity-35 stroke-current text-primary rounded-lg">
+                        <rect width="256" height="256" fill="currentColor"/>
+                    </motion.svg>
                 </motion.div>
             </motion.div>
             <div className="flex flex-col items-center text-center lg:items-start gap-4">
@@ -93,9 +100,9 @@ export function Hero(){
                 <TextAnim/>
                 <motion.p id="herotext3"
                 initial={{ opacity: 0 }}
-                className="text-text text-5xl  lg:text-7xl opacity-70">Fullstack Developer</motion.p>
+                className="text-text text-5xl  lg:text-7xl opacity-70">Fullstack Developer
+                </motion.p>
             </div>
         </section>
     )
-
 } 

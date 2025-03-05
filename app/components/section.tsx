@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 
 /* 
-    This component is used to create a section in the page. It has a title and a children prop, which
-    is the component that will be shown in the section.    
+    This component is used to create a section in the page. It has a title and a children prop.
 */
 
 export default function Section({title, children}: {title: string, children: ReactNode}){
