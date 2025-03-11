@@ -65,7 +65,7 @@ export default function SlideShow({project, direction, handler}: SlideShowProps)
                 animate="center"
                 exit="exit"
                 layoutId={`${project}project`}
-                className="w-full h-full object-cover rounded-md"
+                className="w-full h-full object-cover rounded-md text-[0px]"
                 transition={{
                     x: { type: "spring", stiffness: 300, damping: 30 },
                     opacity: { duration: 0.2 }
