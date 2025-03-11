@@ -16,7 +16,7 @@ export const projectData : ProjectData[] = [
             `I contributed with various tasks using Django, mainly focused on the 
             development of a RESTful API as well as the creation of unit tests.
             I also got involved in the sprint planning meetings and the daily sync meetings.`,
-            `Thanks to this experience I learnt both how to utilize tools such as Django and Docker and 
+            `Thanks to this experience I learnt both how to utilize tools such as Django and Docker, and 
             numerous concepts including the REST architecture and unit testing. I also gained insight into 
             what it means to be in a working environment, which I consider very valuable.`
         ],
@@ -32,7 +32,7 @@ export const projectData : ProjectData[] = [
             `The limitations of LC-3, combined with its lack of documentation made this assignment 
             a fairly difficult one.  `,
             `Overall, it turned out to be a much more entertaining puzzle to solve than I initially thought it would be. 
-            Even though I hope I never have to code in Assembly again, I have to admit that this project taught me how to 
+            Even though I hope I never have to program in Assembly again, I have to admit that this project taught me how to 
             break down complex problems and find creative solutions despite strict limitations.`
 
         ],
@@ -48,8 +48,8 @@ export const projectData : ProjectData[] = [
             avoiding unnecessary renders and generating code that is readable and easy to understand are some of
             the best practices I tried to implement.`,
             `I definitely learnt a lot from this project. Not only was I able to experiment with technologies I 
-            was already familiar with about but also to learn new tools such as Framer Motion. I reckon it is likely 
-            that there are numerous mistakes or areas that could be further optimized. Hopefully as time goes on I will
+            was already familiar with but also to learn new tools such as Framer Motion. I reckon it is likely 
+            that there are numerous mistakes or areas that could be further optimized. Hopefully, as time goes on I will
             improve my skills as a coder and be able to use this website to track my progress.`,
         ],
             src: "/images/PortfolioTools.png",

@@ -3,7 +3,7 @@
 import { motion, useAnimate, AnimationSequence } from "framer-motion";
 import Image from "next/image";
 import { useEffect } from "react";
-import TextAnim from "@/app/data/animations";
+import TextAnim from "@/app/components/pageSections/hero/animations";
 
 /*
     This component is the main component of the hero section. It shows an image of myself, my name and 
@@ -13,7 +13,7 @@ import TextAnim from "@/app/data/animations";
     to the useAnimate hook, which is not the best practice.
 */
 
-export function Hero(){
+export default function Hero(){
 
     const [scope, animate] = useAnimate()
 
@@ -74,7 +74,7 @@ export function Hero(){
                 initial={{ x: 10, y: 10}}
                 className="w-full h-full z-20 rounded-lg">                
                     <Image
-                        src="/images/PictureWithoutBackground.png"
+                        src="/images/fotoPort2.png"
                         alt="Picture of myself"
                         fill
                         className="rounded-lg"/>                                                

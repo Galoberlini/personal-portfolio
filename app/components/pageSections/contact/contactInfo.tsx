@@ -72,6 +72,8 @@ export default function ContactInfo({ contactData }: { contactData: ContactData 
                 <span>
                     <a 
                         href={section.link}
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         download={section.downloadable ? "" : undefined}
                         className="ml-2 underline hover:no-underline transition-all duration-500 ease-in-out"
                         >

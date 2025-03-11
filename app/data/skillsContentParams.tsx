@@ -77,7 +77,7 @@ export const BackEndContentParams : SkillsContent = {
             content:"Proficient in SQL and capable of performing complex database queries."
         }, {
             id:4,
-            content:"Design and manage databases using MySQL.."
+            content:"Design and manage databases using MySQL."
         }, {
             id:5,
             content:"Familiar with Docker for containerized applications."
