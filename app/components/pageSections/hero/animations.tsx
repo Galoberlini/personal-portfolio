@@ -51,7 +51,7 @@ function CursorBlinker() {
     }, [count]);
   
     return (
-      <h1 className="text-text text-center text-6xl lg:text-8xl opacity-90">
+      <h1 className="text-text text-center text-6xl lg:text-8xl opacity-95">
         <motion.span>{displayText}</motion.span>
         <CursorBlinker/>
       </h1>

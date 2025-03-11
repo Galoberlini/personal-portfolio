@@ -33,7 +33,7 @@ export default function Hero(){
             ]);
             await animate(imageSequence)
             await animate("#herotext1",{opacity: 1},{duration: 0.3,})
-            await animate("#herotext3",{opacity: 1},{duration: 0.3, delay: 0.7})
+            await animate("#herotext3",{opacity: 0.85},{duration: 0.3, delay: 0.7})
         }
         heroAnimation()
     }
@@ -94,13 +94,13 @@ export default function Hero(){
             <div className="flex flex-col items-center text-center lg:items-start gap-4">
                 <motion.p id="herotext1" 
                 initial={{ opacity: 0 }}
-                className="text-text text-2xl lg:text-3xl opacity-90 mb-0">
+                className="text-text text-2xl lg:text-3xl mb-0">
                     Hi, my name is
                 </motion.p>
                 <TextAnim/>
                 <motion.p id="herotext3"
                 initial={{ opacity: 0 }}
-                className="text-text text-5xl  lg:text-7xl opacity-70">Fullstack Developer
+                className="text-text text-5xl lg:text-7xl">Fullstack Developer
                 </motion.p>
             </div>
         </section>
