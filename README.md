@@ -24,11 +24,11 @@ Este proyecto tiene como oobjetivo desarrollar mi primera página web utilizando
 
 ### Herramientas / tecnologías / librerías puestas en práctica por primera vez
 - Next.js
-- Typescript (conozco y he utilizado otros lenguajes tipados pero es la primera vez que uso este en concreto)
+- Typescript (conozco y he utilizado otros lenguajes tipados como C# pero es la primera vez que uso este en concreto)
 - Framer Motion
 
 ### Conceptos investigados / repasados / aprendidos
-- Optimización de SEO ()
+- Optimización de SEO (via metadata, optimización de código y rendimiento. Esto no ha sido puesto en práctica en esta versión)
 - Diseño responsivo
 
 Reconozco que este proyecto prácticamente no se aprovecha del uso de Next.js. Debido a esto, decidí que en el próximo proyecto que realice intentaré de implementar la mayor cantidad de características avanzadas de dicho framework.
