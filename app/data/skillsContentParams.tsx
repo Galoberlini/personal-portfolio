@@ -54,7 +54,7 @@ export const FrontEndContentParams : SkillsContent = {
         content:"Develop reusable and adaptable components and hooks for various environments."
     }, {
         id:4,
-        content:"Knowledgeable in SEO optimization to improve website visibility."
+        content:"Knowledgeable in SEO to improve website visibility."
     },
 ],
     svgIcon:(
