@@ -12,27 +12,35 @@ body {
 }
 
 :root {
-  --bg-color: #ffffff; 
-  --text-color: #0a0a0a; 
-  --primary-color: #ffa500; 
+  --bg-color: #ffffff;
+  --text-color: #0a0a0a;
+  --primary-color: #ffa500;
   --secondary-color: #ffffff;
   --third-color: #E8E8d5;
 }
 
 [data-theme='dark'] {
-  --bg-color: #1E293B; 
-  --text-color: #ffffff; 
-  --primary-color: #00cccc; 
-  --secondary-color: #444444; 
+  --bg-color: #1E293B;
+  --text-color: #ffffff;
+  --primary-color: #00cccc;
+  --secondary-color: #444444;
   --third-color: #152238;
 }
 
 [data-theme='light'] {
-  --bg-color: #ffffff; 
-  --text-color: #0a0a0a; 
-  --primary-color: #ffa500; 
+  --bg-color: #ffffff;
+  --text-color: #0a0a0a;
+  --primary-color: #ffa500;
   --secondary-color: #ffffff;
   --third-color: #F1F1E0;
+}
+
+[data-theme='v2'] {
+  --bg-color: #0d0e10;
+  --text-color: #e5e7eb;
+  --primary-color: #323437;
+  --secondary-color: #161a1f;
+  --third-color: #23262b;
 }
 
 ol,
@@ -52,6 +60,7 @@ h3 {
   margin-inline: auto;
   margin-bottom: 6rem;
 }
+
 /* 
   Decided to put the css behind the hero component here so as to simplify the tailwind inline css
   In the hero component I will use tailwind to modify the css according to the screen size.
@@ -85,12 +94,12 @@ h3 {
   width: 100%;
   height: auto;
   z-index: 50;
-  background-color: var(--bg-color);
+  background-color: transparent;
 }
 
 @layer components {
-  .hover-button{
-   @apply hover:rounded-xl hover:bg-third
+  .hover-button {
+    @apply hover:rounded-xl hover:bg-third
   }
 }
 
@@ -120,12 +129,12 @@ h3 {
   }
 }
 
-@media (min-height: 800px){
-  .hero{
+@media (min-height: 800px) {
+  .hero {
     min-height: 80vh;
   }
-  .section{
+
+  .section {
     min-height: 80vh;
   }
 }
-
