@@ -25,7 +25,7 @@ const descriptionVariants = {
 export default function Methodology() {
     return (
         <section id="Methodology" className="relative w-10/12 mx-auto my-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Methodology</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-text">Methodology</h2>
             <div className="flex flex-col">
                 {methodologySteps.map((s, i) => (
                     <motion.div

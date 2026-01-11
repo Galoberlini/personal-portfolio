@@ -6,11 +6,9 @@ import { websites } from "../data/websites"
 export default function WebSites() {
     return (
         <section id="WebSites" className="w-10/12 max-w-4xl mx-auto my-24">
-            <div className="flex flex-col items-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[var(--text-color)]">
-                    Websites
-                </h2>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-text">
+                Websites
+            </h2>
 
             <div className="space-y-24 md:space-y-32">
                 {websites.map((w, i) => (

@@ -66,7 +66,7 @@ export default function VersionModal({ cards }: Props) {
                     aria-label="Open versions"
                     className="fixed bottom-5 right-5 z-[80] rounded-full bg-primary text-bg shadow-lg hover:opacity-90 transition-opacity p-3"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 text-text">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
                     </svg>
 
@@ -106,7 +106,7 @@ export default function VersionModal({ cards }: Props) {
                                     </button>
                                 </div>
                                 <div id="version-modal-description" className="overflow-auto h-[calc(100%-56px)] p-4">
-                                    <ul className="flex flex-col gap-3">
+                                    <ul className="grid grid-cols-1 gap-4">
                                         {cards.map((c, i) => (
                                             <li
                                                 key={i}
@@ -114,19 +114,31 @@ export default function VersionModal({ cards }: Props) {
                                                 role="button"
                                                 onClick={() => router.push(`/v${i + 1}`)}
                                                 onKeyDown={(e) => { if (e.key === 'Enter') router.push(`/v${i + 1}`) }}
-                                                className="flex items-center gap-3 rounded-lg border border-third p-3 bg-secondary focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer"
+                                                className="group flex flex-col overflow-hidden rounded-xl border border-third bg-secondary focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer transition-all hover:border-[var(--text-color)]/30"
                                             >
-                                                <div className="flex-1 min-w-0">
-                                                    <h4 className="font-medium mb-1">V{i + 1}</h4>
-                                                    <p className="text-sm opacity-80">{c.description}</p>
+                                                {/* Imagen: Ahora más grande y arriba */}
+                                                <div className="relative w-full aspect-[16/9] flex-shrink-0 border-b border-third overflow-hidden">
+                                                    <Image
+                                                        src={c.image}
+                                                        alt={`Version ${i + 1}`}
+                                                        fill
+                                                        sizes="(max-width: 560px) 100vw, 560px"
+                                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                                        unoptimized
+                                                    />
                                                 </div>
-                                                <div className="relative w-20 h-14 flex-shrink-0 rounded-md overflow-hidden border border-third">
-                                                    <Image src={c.image} alt={`Version ${i + 1}`} fill sizes="80px" className="object-cover" unoptimized />
+
+                                                {/* Texto informativo */}
+                                                <div className="p-4">
+                                                    <div className="flex justify-between items-center mb-1">
+                                                        <h4 className="font-bold text-lg">V{i + 1}</h4>
+                                                    </div>
+                                                    <p className="text-sm opacity-70 leading-relaxed">{c.description}</p>
                                                 </div>
                                             </li>
                                         ))}
                                         {cards.length === 0 && (
-                                            <li className="text-sm opacity-70">No versions yet.</li>
+                                            <li className="text-sm opacity-70 text-center py-10">No versions yet.</li>
                                         )}
                                     </ul>
                                 </div>

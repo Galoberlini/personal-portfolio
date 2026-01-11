@@ -2,8 +2,8 @@ import VersionModal from "./components/versionModal";
 
 export default function Template({ children }: { children: React.ReactNode }) {
     const versionCards = [
-        { description: "Primera iteración del portfolio con secciones base y animaciones iniciales.", image: "/images/PortfolioTools.png" },
-        { description: "Refactor de componentes, mejoras de accesibilidad y soporte de tema oscuro.", image: "/images/fotoPort2.png" },
+        { description: "My first ever website. It's rough, but it was an important learning step and shows how much I've progressed since then.", image: "/images/fotoPort1.jpeg" },
+        { description: "A visual update with my latest experiences. I focused on creating a cleaner interface while keeping the information current.", image: "/images/fotoPort2.jpeg" },
     ];
     return (
         <>

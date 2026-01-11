@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 export default function TechStack() {
     return (
         <section id="TechStack" className="w-10/12 max-w-4xl mx-auto my-32">
-            <h2 className="text-3xl font-bold mb-16 text-center">Technologies</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-text">Technologies</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                 {categorizedStack.map((cat, i) => (

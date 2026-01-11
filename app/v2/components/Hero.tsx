@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export default function Hero() {
     return (
-        <section id="Hero" className="relative min-h-[85dvh] md:min-h-[100dvh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+        <section id="Hero" className="relative min-h-[100svh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
             {/* animated glow background */}
             <div aria-hidden className="pointer-events-none absolute -inset-[10%] opacity-40" style={{
                 background: `radial-gradient(40% 40% at 30% 30%, rgba(50,52,55,0.8) 0%, rgba(50,52,55,0.1) 60%, transparent 70%),

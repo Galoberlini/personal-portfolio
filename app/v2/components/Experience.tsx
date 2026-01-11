@@ -6,7 +6,7 @@ import { experienceItems } from "../data/experience"
 export default function Experience() {
     return (
         <section id="Experience" className="relative w-full max-w-4xl mx-auto my-24 px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-[var(--text-color)]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-text">
                 Professional Experience
             </h2>
 
