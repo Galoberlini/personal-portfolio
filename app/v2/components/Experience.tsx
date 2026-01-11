@@ -7,7 +7,7 @@ export default function Experience() {
     return (
         <section id="Experience" className="relative w-full max-w-4xl mx-auto my-24 px-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-[var(--text-color)]">
-                Experience Path
+                Professional Experience
             </h2>
 
             {/* Contenedor con más margen lateral en mobile para que no se pegue al borde */}
