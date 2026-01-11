@@ -138,3 +138,27 @@ h3 {
     min-height: 80vh;
   }
 }
+
+@keyframes glowMove {
+  0% {
+    transform: translate(-10%, -10%) scale(1);
+  }
+
+  50% {
+    transform: translate(10%, 10%) scale(1.08);
+  }
+
+  100% {
+    transform: translate(-10%, -10%) scale(1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
