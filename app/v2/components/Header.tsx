@@ -1,13 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
-
-const headerLinks = [
-    { href: "Methodology", text: "Methodology" },
-    { href: "Experience", text: "Experience" },
-    { href: "WebSites", text: "WebSites" },
-    { href: "TechStack", text: "TechStack" },
-]
+import { headerLinks } from "../data/header"
 
 const titleVariants = {
     initial: { opacity: 0, y: -6 },
