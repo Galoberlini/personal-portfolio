@@ -17,7 +17,7 @@ export const experienceItems: ExperienceItem[] = [
             "Built features for a production PWA used by restaurant chains, handling real workflows for end users and admins. Redesigned the onboarding experience to reduce friction and simplify initial navigation. Streamlined multi-location operations, cutting the setup process for new branches significantly.",
         stack: ["React", "Node.js", "Express.js", "MongoDB"],
         ubicacion: "Remote",
-        date: "Sep 2025 — Nov 2025",
+        date: "Sep 2025 — Dec 2025",
     },
     {
         imageUrl: "/images/equalityLogo.png",
