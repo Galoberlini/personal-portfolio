@@ -1,7 +1,7 @@
 # Portfolio personal desarrollado con Next.js
 
 ## Idea 
-Este proyecto tiene como oobjetivo desarrollar mi primera página web utilizando Next.js, un framework que aprendí recientemente. El mismo me permitió poner en práctica herramientas que he aprendido a utilizar recientemente, repasar conceptos que he visto previamente y adquirir conocimientos sobre temas nuevos. Además, uno de mis principales objetivos como programador y desarrollador web es mejorar continuamente la calidad del código que hago. Por lo que, gracias a este proyecto pude ver que áreas necesito mejorar y que buenas prácticas puedo implementar a futuro. 
+Este proyecto tiene como objetivo desarrollar mi primera página web utilizando Next.js, un framework que aprendí recientemente. El mismo me permitió poner en práctica herramientas que he aprendido a utilizar recientemente, repasar conceptos que he visto previamente y adquirir conocimientos sobre temas nuevos. Además, uno de mis principales objetivos como programador y desarrollador web es mejorar continuamente la calidad del código que hago. Por lo que, gracias a este proyecto pude ver que áreas necesito mejorar y que buenas prácticas puedo implementar a futuro. 
 
 ## Herramientas utilizadas
 
@@ -35,7 +35,7 @@ Reconozco que este proyecto prácticamente no se aprovecha del uso de Next.js. D
 
 ## Versiones
 
-### v1.0 (actual)
+### v1.0 (mi primera página hecha :D)
 - Primera versión del portfolio con Next.js, TypeScript y Tailwind
 - Cuenta con las secciones:
     - Acerca de
@@ -43,7 +43,7 @@ Reconozco que este proyecto prácticamente no se aprovecha del uso de Next.js. D
     - Skills
 - Desplegada en vercel
 
-### v1.1 (próxima actualización)
+### v2 (actual)
 - Mejora visual de la página en general
-- Mayor optimización de código (css, hooks, etc)
-- Mejora de accesibilidad y SEO (en caso de que vea que no benefician mucho a la página, experimentaré con estos conceptos en otro proyecto)
+- Información actualizada
+- Modal de versiones para poder ver la evolución del portfolio con el paso del tiempo
