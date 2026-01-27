@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 		title: 'Galo Berlini Fullstack Developer',
 		siteName: 'Galo Berlini Fullstack Developer',
 		description: 'A personal portfolio developed with Next.js, showcasing my projects and skills as a web developer.',
-		images: ['https://galo-berlini.vercel.app/images/PortfolioTools.png'],
+		images: ['https://galo-berlini.vercel.app/images/fotoPort2.jpeg'],
 		url: 'https://galo-berlini.vercel.app/',
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: 'Galo Berlini Fullstack Developer',
 		description: 'A personal portfolio developed with Next.js, showcasing my projects and skills as a web developer.',
-		images: ['https://galo-berlini.vercel.app/images/PortfolioTools.png'],
+		images: ['https://galo-berlini.vercel.app/images/fotoPort2.jpeg'],
 	},
 };
 export const viewport: Viewport = {
